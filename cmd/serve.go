@@ -29,13 +29,11 @@ import (
 // serveCmd represents the serve command
 var serveCmd = &cobra.Command{
 	Use:   "serve",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Short: "Serve the generated HTML files.",
+	Long: `Use a simple HTTP server to serve the generated files. 
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+This command is useful for testing. 
+In production, a server like NGINX or Caddy is recommended.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("serve called")
 	},
