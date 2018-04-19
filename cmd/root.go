@@ -23,7 +23,6 @@ package cmd
 import (
 	"log"
 
-	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -73,11 +72,7 @@ func initConfig() {
 		viper.SetConfigFile(cfgFile)
 		err := viper.ReadInConfig()
 		if err == nil {
-			log.Println("Using config file:", viper.ConfigFileUsed())
-			viper.WatchConfig()
-			viper.OnConfigChange(func(e fsnotify.Event) {
-				log.Println("Config file changed:", e.Name)
-			})
+			log.Println("Using configuration file:", viper.ConfigFileUsed())
 		} else {
 			log.Fatalln("Unable to parse config file:", viper.ConfigFileUsed(), err)
 		}

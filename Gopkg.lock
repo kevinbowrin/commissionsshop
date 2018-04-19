@@ -20,6 +20,12 @@
   revision = "53511d3c733003985b0b76f733df1f4d0095ee6a"
 
 [[projects]]
+  name = "github.com/davecgh/go-spew"
+  packages = ["spew"]
+  revision = "346938d642f2ec3594ed81d874461961cd0faa76"
+  version = "v1.1.0"
+
+[[projects]]
   branch = "master"
   name = "github.com/dustin/go-jsonpointer"
   packages = ["."]
@@ -157,6 +163,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "78c805581db15ac14c3229ec7c6548869f198489099141e6236d4e19806d772e"
+  inputs-digest = "1ffb61d590184fb0da09fcef23e4f6ea65f46caf3bc47f8f0b0d0a3d4e534b42"
   solver-name = "gps-cdcl"
   solver-version = 1
